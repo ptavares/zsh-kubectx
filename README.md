@@ -66,7 +66,7 @@ source ~/.zsh-kubectx/zsh-kubectx.plugin.zsh
 
 ## Updating kubectx
 
-The plugin comes with a zsh function to update [kubectx](https://github.com/cunymatthieu/kubectx.git) manually
+The plugin comes with a zsh function to update [kubectx](https://github.com/ahmetb/kubectx.git) manually
 
 ```shell
 # From zsh shell
