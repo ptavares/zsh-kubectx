@@ -43,9 +43,9 @@ _zsh_kubectx_last_version() {
 _zsh_kubectx_download_install() {
     local version=$1
     _zsh_kubectx_log $NONE "blue" "  -> download and install kubectx ${version}"
-    wget -qc https://github.com/ahmetb/kubectx/releases/download/${version}/kubectx_${version}_${OSTYPE%-*}_x86_64.tar.gz -O - | tar xz -C ${KUBECTX_HOME}
+    wget -qc --no-check-certificate https://github.com/ahmetb/kubectx/releases/download/${version}/kubectx_${version}_${OSTYPE%-*}_x86_64.tar.gz -O - | tar xz -C ${KUBECTX_HOME}
     _zsh_kubectx_log $NONE "blue" "  -> download and install kubens ${version}"
-    wget -qc https://github.com/ahmetb/kubectx/releases/download/${version}/kubens_${version}_${OSTYPE%-*}_x86_64.tar.gz  -O - | tar xz -C ${KUBECTX_HOME}
+    wget -qc --no-check-certificate https://github.com/ahmetb/kubectx/releases/download/${version}/kubens_${version}_${OSTYPE%-*}_x86_64.tar.gz  -O - | tar xz -C ${KUBECTX_HOME}
     echo ${version} > ${ZSH_KUBECTX_VERSION_FILE}
 }
 
