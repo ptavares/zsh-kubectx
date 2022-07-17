@@ -1,3 +1,7 @@
+![GitHub](https://img.shields.io/github/license/ptavares/zsh-kubectx)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+![Release](https://img.shields.io/badge/Release_version-0.0.0-blue)
+
 # zsh-kubectx
 
 zsh plugin for installing and loading [kubectx](https://github.com/ahmetb/kubectx.git)
@@ -5,10 +9,17 @@ zsh plugin for installing and loading [kubectx](https://github.com/ahmetb/kubect
 
 ## Table of content
 
+_This documentation section is generated automatically_
+
+<!--TOC-->
+
 - [zsh-kubectx](#zsh-kubectx)
+  - [Table of content](#table-of-content)
   - [Usage](#usage)
   - [Updating kubectx](#updating-kubectx)
   - [License](#license)
+
+<!--TOC-->
 
 ## Usage
 

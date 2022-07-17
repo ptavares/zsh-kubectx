@@ -51,8 +51,8 @@ _zsh_kubectx_download_install() {
 
 _zsh_kubectx_install() {
   _zsh_kubectx_log $NONE "blue" "#############################################"
-  _zsh_kubectx_log $BOLD "blue" "Installing kubectx..." 
-  _zsh_kubectx_log $NONE "blue" "-> creating kubectx home dir : ${KUBECTX_HOME}"  
+  _zsh_kubectx_log $BOLD "blue" "Installing kubectx..."
+  _zsh_kubectx_log $NONE "blue" "-> creating kubectx home dir : ${KUBECTX_HOME}"
   mkdir -p ${KUBECTX_HOME} || _zsh_kubectx_log $NONE "green" "dir already exist"
   local last_version=$(_zsh_kubectx_last_version)
   _zsh_kubectx_log $NONE "blue" "-> retrieve last version of kubectx..."
@@ -64,7 +64,7 @@ _zsh_kubectx_install() {
 update_zsh_kubectx() {
   _zsh_kubectx_log $NONE "blue" "#############################################"
   _zsh_kubectx_log $BOLD "blue" "Checking new version of kubectx..."
-  
+
   local current_version=$(cat ${ZSH_KUBECTX_VERSION_FILE})
   local last_version=$(_zsh_kubectx_last_version)
 
@@ -72,7 +72,7 @@ update_zsh_kubectx() {
   then
     _zsh_kubectx_log $BOLD "green" "Already up to date, current version : ${current_version}"
   else
-    _zsh_kubectx_log $NONE "blue" "-> Updating kubectx..." 
+    _zsh_kubectx_log $NONE "blue" "-> Updating kubectx..."
     _zsh_kubectx_download_install ${last_version}
     _zsh_kubectx_log $BOLD "green" "Update OK"
   fi
