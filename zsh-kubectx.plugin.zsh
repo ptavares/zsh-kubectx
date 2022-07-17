@@ -80,8 +80,12 @@ update_zsh_kubectx() {
 }
 
 _zsh_kubectx_load() {
-    # export PATH
-    export PATH=${PATH}:${KUBECTX_HOME}
+    # export PATH if needed
+    local -r plugin_dir=${KUBECTX_HOME}
+    # Add the plugin bin directory path if it doesn't exist in $PATH.
+    if [[ -z ${path[(r)$plugin_dir]} ]]; then
+        path+=($plugin_dir)
+    fi
 }
 
 # install kubectx if it isnt already installed
